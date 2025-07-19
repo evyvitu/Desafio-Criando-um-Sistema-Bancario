@@ -17,3 +17,53 @@ Este sistema foi desenvolvido conforme os requisitos propostos no **Desafio: Cri
   - Saldo suficiente
 - **[E] Extrato**: Exibe o histórico de transações e o saldo atual.
 - **[Q] Sair**: Encerra o programa.
+  
+---
+
+## ⚙️ Requisitos
+
+- Python 3.x instalado em sua máquina.
+
+---
+
+## 🚀 Como executar
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/sistema-bancario-python.git
+
+2. Acesse a pasta do projeto:
+   ```bash
+   cd sistema-bancario-python
+   
+3. Execute o script:
+   ```bash
+   python sistema_bancario.py
+
+---
+
+## 📸 Exemplo de uso  
+MENU:  
+[ D ] Depositar  
+[ S ] Sacar  
+[ E ] Extrato  
+[ Q ] Sair   
+
+Escolha uma opção: d  
+Informe o valor do depósito: R$ 200.00  
+Depósito realizado com sucesso. 
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
