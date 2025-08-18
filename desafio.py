@@ -1,18 +1,3 @@
-menu = """
-================ MENU =================
-[ D ] Depositar
-[ S ] Sacar
-[ E ] Extrato
-[ Q ] Sair
-======================================
-"""
-
-saldo = 0
-limite = 500
-extrato = ""
-numero_saques = 0
-LIMITE_SAQUES = 3
-
 def depositar(saldo, valor, extrato):
     if valor > 0:
         saldo += valor
@@ -49,9 +34,27 @@ def exibir_extrato(saldo, extrato):
     print(f"Saldo atual: R$ {saldo:.2f}")
     print("==========================================")
 
-while True:
-    print(menu)
+def menu():
+    menu_texto = """
+================ MENU =================
+[ D ] Depositar
+[ S ] Sacar
+[ E ] Extrato
+[ Q ] Sair
+======================================
+"""
+    print(menu_texto)
     opcao = input("Escolha uma opção: ").strip().lower()
+    return opcao
+
+saldo = 0
+limite = 500
+extrato = ""
+numero_saques = 0
+LIMITE_SAQUES = 3
+
+while True:
+    opcao = menu()
 
     if opcao == "d":
         valor = float(input("Informe o valor do depósito: R$ "))
