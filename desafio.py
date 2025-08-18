@@ -7,7 +7,7 @@ def depositar(saldo, valor, extrato):
         print("Operação falhou! O valor informado não é válido.")
     return saldo, extrato
 
-def sacar(saldo, valor, extrato, numero_saques, limite, LIMITE_SAQUES):
+def sacar(*, saldo, valor, extrato, numero_saques, limite, LIMITE_SAQUES):
     excedeu_saldo = valor > saldo
     excedeu_limite = valor > limite
     excedeu_saques = numero_saques >= LIMITE_SAQUES
@@ -47,29 +47,40 @@ def menu():
     opcao = input("Escolha uma opção: ").strip().lower()
     return opcao
 
-saldo = 0
-limite = 500
-extrato = ""
-numero_saques = 0
-LIMITE_SAQUES = 3
+def main():
+    saldo = 0
+    limite = 500
+    extrato = ""
+    numero_saques = 0
+    LIMITE_SAQUES = 3
 
-while True:
-    opcao = menu()
+    while True:
+        opcao = menu()
 
-    if opcao == "d":
-        valor = float(input("Informe o valor do depósito: R$ "))
-        saldo, extrato = depositar(saldo, valor, extrato)
+        if opcao == "d":
+            valor = float(input("Informe o valor do depósito: R$ "))
+            saldo, extrato = depositar(saldo, valor, extrato)
 
-    elif opcao == "s":
-        valor = float(input("Informe o valor do saque: R$ "))
-        saldo, extrato, numero_saques = sacar(saldo, valor, extrato, numero_saques, limite, LIMITE_SAQUES)
+        elif opcao == "s":
+            valor = float(input("Informe o valor do saque: R$ "))
+            saldo, extrato, numero_saques = sacar(
+                saldo=saldo,
+                valor=valor,
+                extrato=extrato,
+                numero_saques=numero_saques,
+                limite=limite,
+                LIMITE_SAQUES=LIMITE_SAQUES
+            )
 
-    elif opcao == "e":
-        exibir_extrato(saldo, extrato)
+        elif opcao == "e":
+            exibir_extrato(saldo, extrato)
 
-    elif opcao == "q":
-        print("Obrigado por usar nosso sistema. Volte sempre!")
-        break
+        elif opcao == "q":
+            print("Obrigado por usar nosso sistema. Volte sempre!")
+            break
 
-    else:
-        print("Operação inválida! Por favor, selecione uma das opções.")
+        else:
+            print("Operação inválida! Por favor, selecione uma das opções.")
+
+if __name__ == "__main__":
+    main()
