@@ -28,7 +28,7 @@ def sacar(*, saldo, valor, extrato, numero_saques, limite, LIMITE_SAQUES):
     
     return saldo, extrato, numero_saques
 
-def exibir_extrato(saldo, extrato):
+def exibir_extrato(saldo, *, extrato):
     print("\n================ EXTRATO ================")
     print("Não foram realizadas movimentações." if not extrato else extrato)
     print(f"Saldo atual: R$ {saldo:.2f}")
@@ -73,7 +73,7 @@ def main():
             )
 
         elif opcao == "e":
-            exibir_extrato(saldo, extrato)
+            exibir_extrato(saldo, extrato=extrato)
 
         elif opcao == "q":
             print("Obrigado por usar nosso sistema. Volte sempre!")
