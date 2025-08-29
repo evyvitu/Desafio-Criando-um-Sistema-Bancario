@@ -54,14 +54,14 @@ Este sistema foi desenvolvido como evolução do Desafio: Criando um Sistema Ban
 
 ## 📸 Exemplo de uso  
 MENU:
-[1] Depositar
-[2] Sacar
-[3] Extrato
-[4] Criar Usuário
-[5] Criar Conta
-[6] Listar Usuários
-[7] Listar Contas
-[0] Sair
+[1] Depositar  
+[2] Sacar  
+[3] Extrato  
+[4] Criar Usuário  
+[5] Criar Conta  
+[6] Listar Usuários  
+[7] Listar Contas  
+[0] Sair  
 
 Escolha uma opção: 4  
 CPF (somente números): 12345678900  
