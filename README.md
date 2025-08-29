@@ -1,8 +1,8 @@
-# 💰 Sistema Bancário em Python (Terminal)
+# 💰 Sistema Bancário em Python (Terminal e Orientado a Objetos)
 
 ## 🧾 Sobre o Projeto
 
-Foi desenvolvido um sistema bancário em Python, operando via terminal, que permite gerenciar usuários e contas bancárias, além de realizar operações como depósitos, saques e emissão de extratos. O programa controla limites por operação, quantidade de saques, além de registrar todas as movimentações.
+Foi desenvolvido um sistema bancário em Python utilizando Programação Orientada a Objetos (POO), operando via terminal, que permite gerenciar usuários e contas bancárias, além de realizar operações como depósitos, saques e emissão de extratos. O programa controla limites por operação, quantidade de saques, além de registrar todas as movimentações.
 
 Este sistema foi desenvolvido como evolução do Desafio: Criando um Sistema Bancário, que faz parte do bootcamp Santander 2025 - Back-End com Python, promovido pela DIO (Digital Innovation One).
 
@@ -15,8 +15,8 @@ Este sistema foi desenvolvido como evolução do Desafio: Criando um Sistema Ban
   - Limite de saque por operação: R$ 500,00
   - Máximo de 3 saques por conta
   - Saldo suficiente
-- **[3] Extrato**: Exibe o histórico de transações e o saldo atual.
-- **[4] Criar Usuário**: Cadastra um novo usuário informando:
+- **[3] Extrato**: Exibe o histórico de transações e o saldo atual (com data, tipo e valor).
+- **[4] Criar Usuário**: Cadastra um novo usuário do tipo Pessoa Física:
    - Nome completo
    - Data de nascimento
    - CPF (único)
@@ -24,7 +24,8 @@ Este sistema foi desenvolvido como evolução do Desafio: Criando um Sistema Ban
 - **[5] Criar Conta**: Cria uma conta vinculada a um usuário já cadastrado.
    - Agência padrão: 0001
    - Número da conta gerado automaticamente
-- **[6] Listar Usuários**: Mostra todos os usuários cadastrados.
+   - O cliente pode possuir mais de uma conta
+- **[6] Listar Usuários**: Mostra todos os usuários cadastrados, com seus dados pessoais.
 - **[7] Listar Contas**: Mostra todas as contas criadas, com titular e CPF.
 - **[0] Sair**: Encerra o programa.
   
@@ -80,5 +81,10 @@ Agência: 0001, Conta: 1, Titular: João da Silva (CPF: 12345678900)
 Digite o número da conta: 1  
 Valor do depósito: R$ 200.00  
 Depósito realizado com sucesso!
+
+Escolha uma opção: 3
+--- Extrato ---
+28-08-2025 19:45:10 - Deposito: R$ 200.00
+Saldo atual: R$ 200.00
 
 ---
